@@ -23,10 +23,10 @@ scrape_configs:
     static_configs:
       - targets: ['postgres-metrics-collector-staging.up.railway.app']
 
-  # - job_name: 'postgres'
-  #   scrape_interval: 5s
-  #   static_configs:
-  #     - targets: ['localhost:9187']
+  - job_name: 'postgres-exporter'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['postgres-exporter.railway.internal:9187']
 
   # - job_name: 'mysql'
   #   scrape_interval: 5s
