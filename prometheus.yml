@@ -42,6 +42,7 @@ scrape_configs:
 
   - job_name: 'bff'
     scrape_interval: 30s
-    scheme: https
+    scheme: http
+    metrics_path: /metrics
     static_configs:
-      - targets: ['lol-ai-ban-pick-bff-production.up.railway.app:8080']
+      - targets: ['lol-ai-ban-pick-bff.railway.internal:8080']
