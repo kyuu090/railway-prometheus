@@ -1,5 +1,5 @@
 global:
-  scrape_interval:     15s
+  scrape_interval:     30s
   external_labels:
     monitor: 'railway-prom'
 
@@ -28,7 +28,7 @@ scrape_configs:
     static_configs:
       - targets: ['postgres-exporter.railway.internal:9187']
 
-  # - job_name: 'mysql'
-  #   scrape_interval: 5s
-  #   static_configs:
-  #     - targets: ['localhost:9104']
+  - job_name: 'match-id-collector'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['lol-match-id-collector.railway.internal:9464']
